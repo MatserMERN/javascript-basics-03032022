@@ -311,7 +311,7 @@ The prototype is an object that is associated with
 every functions and objects by default in javascript
 
 This is special type of obejct to which additional properties and methods can be attached.
-Which will shared acorss all the instnaces of its contsructor function
+Which will be shared acorss all the instnaces of its contsructor function
 
 Usages
 ------

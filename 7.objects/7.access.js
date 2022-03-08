@@ -23,7 +23,7 @@ var studentPreventExtensions = {
 
 Object.preventExtensions(studentPreventExtensions)
 
-studentPreventExtensions.email = 'scott@ef.com' // CREATE
+studentPreventExtensions.email = 'scott@ef.com' // CREATE - Not possible
 studentPreventExtensions.city ="Bengaluru" // UPDATE
 delete studentPreventExtensions.age // DELETE
 console.log(studentPreventExtensions) // READ 
@@ -40,7 +40,7 @@ var studentSeal = {
 Object.seal(studentSeal)
 
 studentSeal.email = 'scott@ef.com' // CREATE
-studentSeal.city ="Bengaluru" // UPDATE
+studentSeal.city ="Bengaluru" // UPDATE - Only this is possible
 delete studentSeal.age // DELETE
 console.log(studentSeal) // READ
 
@@ -50,12 +50,29 @@ var studentFreeze = {
     firstName: 'Scott',
     lastname: 'Desatnick',
     city: 'Boston',
-    age: 45
+    age: 45,
+    address: {
+        state : 'Massecchusets'
+    }
 }
 
 Object.freeze(studentFreeze)
+Object.freeze(studentFreeze.address)
+
 
 studentFreeze.email = 'scott@ef.com' // CREATE
 studentFreeze.city ="Bengaluru" // UPDATE
 delete studentFreeze.age // DELETE
+
+studentFreeze.address.state ='Telangana'
+
 console.log(studentFreeze) // READ
+
+// HACK
+
+var studentStringify= JSON.stringify(studentFreeze)
+var studentParse = JSON.parse(studentStringify)
+
+studentParse.email ='scott@ef.com'
+console.log(studentParse)
+

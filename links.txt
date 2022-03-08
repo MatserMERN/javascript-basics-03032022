@@ -1,0 +1,3 @@
+https://www.w3schools.com/js/js_errors.asp - Types of errors 
+
+https://www.w3schools.com/js/js_strict.asp - Strict Mode

@@ -14,8 +14,9 @@ console.log(total)
 
 console.log(window)
 
-// function confirm(message){
-//     return message
-// }
+var message = (function confirm(message){
+    return message
+})('do you want to proceed ?')
 
+console.log(message)
 // console.log(confirm('You made the payment'))
